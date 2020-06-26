@@ -1,29 +1,24 @@
 (function () {
-
   var global = global || this || window || Function('return this')();
-  var nx = global.nx || require('next-js-core2');
+  var nx = global.nx || require('@feizheng/next-js-core2');
+  var RETURN_VALUE = function(value) { return value; };
 
   nx.compose = function () {
-    var funcs = nx.slice(arguments);
-    if (funcs.length === 0) {
-      return nx.returnValue;
-    }
+    var fns = nx.slice(arguments);
 
-    if (funcs.length === 1) {
-      return funcs[0];
-    }
+    if (fns.length === 0) return RETURN_VALUE;
+    if (fns.length === 1) return fns[0];
 
-    return funcs.reduceRight(function (fn1, fn2) {
+    return fns.reduceRight(function (fn1, fn2) {
       return function () {
-        // real function arguments:
-        return fn1(fn2.apply(null, arguments));
+        return fn1(
+          fn2.apply(null, arguments)
+        );
       };
     });
   };
 
-
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = nx.compose;
   }
-
-}());
+})();

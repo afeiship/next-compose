@@ -1,29 +1,25 @@
-var assert = require('assert');
-var nx = require('next-js-core2');
+const nx = require('@feizheng/next-js-core2');
 require('../src/next-compose');
 
-describe('next/compose args:1/2/3/more', function () {
-
-  it('nx.compose when args === 0', function () {
+describe('api.basic test', () => {
+  test('nx.compose when args === 0', function () {
     var cp = nx.compose();
     var rs = cp(123);
-    assert.equal(rs, 123);
+    expect(rs).toBe(123);
   });
 
 
-  it('nx.compose when args === 1', function () {
+  test('nx.compose when args === 1', function () {
     var fn1 = function (inStr) {
       return inStr.toUpperCase();
     };
 
     var cp = nx.compose(fn1);
     var rs = cp('afei');
-    // console.log(rs);
-
-    assert.equal(rs, 'AFEI');
+    expect(rs).toBe('AFEI');
   });
 
-  it('nx.compose when args > 1', function () {
+  test('nx.compose when args > 1', function () {
     var fn1 = function (inStr) {
       return inStr.toUpperCase();
     };
@@ -32,7 +28,7 @@ describe('next/compose args:1/2/3/more', function () {
       return ['{', inStr, '}'].join('');
     };
 
-    var fn3 = function (inStr){
+    var fn3 = function (inStr) {
       return '@' + inStr;
     }
 
@@ -42,11 +38,7 @@ describe('next/compose args:1/2/3/more', function () {
     var rs = cp('afei');
     var rs2 = cp2('afei');
 
-    assert.equal(rs, '@{AFEI}');
-    assert.equal(rs2, '{@AFEI}');
+    expect(rs).toBe('@{AFEI}');
+    expect(rs2).toBe( '{@AFEI}');
   });
-
-
-
-
 });
