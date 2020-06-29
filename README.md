@@ -49,5 +49,5 @@ Code released under [the MIT license](https://github.com/afeiship/next-compose/b
 [size-image]: https://img.shields.io/bundlephobia/minzip/@feizheng/next-compose
 [size-url]: https://github.com/afeiship/next-compose/blob/master/dist/next-compose.min.js
 
-[download-image]: https://img.shields.io/npm/dw/@feizheng/next-compose
+[download-image]: https://img.shields.io/npm/dm/@feizheng/next-compose
 [download-url]: https://www.npmjs.com/package/@feizheng/next-compose
