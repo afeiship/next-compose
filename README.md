@@ -8,11 +8,13 @@
 
 ## installation
 ```bash
-npm install -S @feizheng/next-compose
+npm install -S @jswork/next-compose
 ```
 
 ## usage
 ```js
+import '@jswork/next-compose';
+
 import '@feizheng/next-compose';
 
 const fn1 = function (inStr) {
@@ -40,14 +42,14 @@ const rs2 = cp2('afei');
 ## license
 Code released under [the MIT license](https://github.com/afeiship/next-compose/blob/master/LICENSE.txt).
 
-[version-image]: https://img.shields.io/npm/v/@feizheng/next-compose
-[version-url]: https://npmjs.org/package/@feizheng/next-compose
+[version-image]: https://img.shields.io/npm/v/@jswork/next-compose
+[version-url]: https://npmjs.org/package/@jswork/next-compose
 
-[license-image]: https://img.shields.io/npm/l/@feizheng/next-compose
+[license-image]: https://img.shields.io/npm/l/@jswork/next-compose
 [license-url]: https://github.com/afeiship/next-compose/blob/master/LICENSE.txt
 
-[size-image]: https://img.shields.io/bundlephobia/minzip/@feizheng/next-compose
+[size-image]: https://img.shields.io/bundlephobia/minzip/@jswork/next-compose
 [size-url]: https://github.com/afeiship/next-compose/blob/master/dist/next-compose.min.js
 
-[download-image]: https://img.shields.io/npm/dm/@feizheng/next-compose
-[download-url]: https://www.npmjs.com/package/@feizheng/next-compose
+[download-image]: https://img.shields.io/npm/dm/@jswork/next-compose
+[download-url]: https://www.npmjs.com/package/@jswork/next-compose
