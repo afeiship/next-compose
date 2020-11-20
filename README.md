@@ -15,8 +15,6 @@ npm install -S @jswork/next-compose
 ```js
 import '@jswork/next-compose';
 
-import '@feizheng/next-compose';
-
 const fn1 = function (inStr) {
   return inStr.toUpperCase();
 };
