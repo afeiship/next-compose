@@ -3,7 +3,7 @@
  * description: Compose for next.
  * homepage: https://github.com/afeiship/next-compose
  * version: 1.0.0
- * date: 2020-11-20 21:35:00
+ * date: 2020-11-20 21:36:49
  * license: MIT
  */
 
