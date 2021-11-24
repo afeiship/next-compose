@@ -30,11 +30,11 @@ const fn3 = function (inStr){
 const cp = nx.compose(fn1, fn2, fn3);
 const cp2 = nx.compose(fn3, fn2, fn1);
 
-const rs = cp('afei');
-// @{AFEI}
-
-const rs2 = cp2('afei');
+const rs = cp('afei');  // fn1(fn2(fn3('afei')));
 // {@AFEI}
+
+const rs2 = cp2('afei'); // fn3(fn2(fn1('afei')));
+// @{AFEI}
 ```
 
 ## license
