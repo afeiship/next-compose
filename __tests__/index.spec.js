@@ -37,8 +37,8 @@
       var rs = cp('afei');
       var rs2 = cp2('afei');
 
-      expect(rs2).toBe('@{AFEI}');
-      expect(rs).toBe( '{@AFEI}');
+      expect(rs2).toBe('{@AFEI}');
+      expect(rs).toBe('@{AFEI}');
     });
 
   });
